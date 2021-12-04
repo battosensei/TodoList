@@ -28,21 +28,16 @@ const App = () => {
   return (
     <div className='main'>
       <div className='center'>
-        <h1>Todo List</h1>
+        <h1>Tache a effectuer</h1>
         <input
           type='text'
-          placeholder='Ajouter une tache'
+          placeholder='Add an item'
           value={inputList}
           onChange={itemEvent}
           id='input'
-        />
+        ></input>
 
-        <button
-          variant='primary'
-          onClick={submits}
-          disabled={inputList}
-          id='submit'
-        >
+        <button onClick={submits} disabled={!inputList} id='submit'>
           +
         </button>
 
