@@ -1,25 +1,66 @@
-import logo from './logo.svg';
-import './App.css';
+import './style.css'
+import React, { useState } from 'react'
+import TodoList from './TodoList'
 
-function App() {
+const App = () => {
+  let [inputList, setInputList] = useState('')
+  let [items, setItems] = useState([])
+
+  const itemEvent = event => {
+    setInputList(event.target.value)
+  }
+
+  const submits = event => {
+    setItems(Items => {
+      return [...Items, inputList]
+    })
+    setInputList('')
+  }
+
+  const deleteItems = id => {
+    setItems(Items => {
+      return Items.filter((arrElem, index) => {
+        return index !== id
+      })
+    })
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div className='main'>
+      <div className='center'>
+        <h1>Todo List</h1>
+        <input
+          type='text'
+          placeholder='Ajouter une tache'
+          value={inputList}
+          onChange={itemEvent}
+          id='input'
+        />
+
+        <button
+          variant='primary'
+          onClick={submits}
+          disabled={inputList}
+          id='submit'
         >
-          Learn React
-        </a>
-      </header>
+          +
+        </button>
+
+        <ol>
+          {items.map((itemVal, index) => {
+            return (
+              <TodoList
+                text={itemVal}
+                key={index}
+                id={index}
+                onSelect={deleteItems}
+              />
+            )
+          })}
+        </ol>
+      </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

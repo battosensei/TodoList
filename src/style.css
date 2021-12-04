@@ -1,0 +1,121 @@
+  .main {
+    width: 100%;
+    height: 670px;
+    background: #6983aa;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .center {
+    width: 35%;
+    height: 550px;
+    background-color: #f4f4f4;
+    box-shadow: 5px 5px 25px -5px rgba(0, 0, 0, 0.5);
+    border-radius: 25px;
+    overflow: scroll;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+
+  h1 {
+    color: white;
+    background: transparent;
+    background-color: #2ecce7;
+    padding: 6px 0 2px 0;
+    margin-bottom: 10px;
+    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+  }
+
+  input {
+    text-align: center;
+    height: 30px;
+    top: 10px;
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    font-weight: 500;
+    width: 60%;
+    border-bottom: 2px solid #2ecce7;
+    outline: none;
+  }
+
+  button {
+    min-height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border-color: transparent;
+    background-color: #2ecce7;
+    color: #fff;
+    font-size: 40px;
+    border: none;
+    outline: none;
+    margin-left: 10px;
+    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+  }
+
+  ol {
+    margin-top: 30px;
+  }
+
+  ol li {
+    padding-left: 0px;
+    list-style: none;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 500;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    color: #044350;
+    text-transform: capitalize;
+  }
+
+  .todo_style {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+  }
+
+  .todo_style .delete {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2ecce7;
+    border-radius: 50%;
+    margin: 0 15px 0 35px;
+    color: aliceblue;
+    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+  }
+
+  .todo_style .delete:hover {
+    background-color: crimson;
+  }
+
+  .list_style {
+    color: crimson;
+  }
+
+    .todo_style .delete {
+      margin: 0 15px 0 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    button {
+      margin-left: 5px;
+      min-height: 40px;
+      width: 40px;
+      color: #fff;
+      font-size: 30px;
+    }
+
+
